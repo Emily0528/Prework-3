@@ -1,11 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+  font-family: "Roboto", sans-serif;
+  color: #1e6b86;
+}
+
 .navigation {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 0;
   padding: 24px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 .navigation ul {
   padding: 0;
@@ -61,4 +80,75 @@
   line-height: 80px;
   font-family: var(--font-primary);
   text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  padding: 16px 36px;
+  margin-top: 30px;
+  background-color: #12b6f1;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #1e6b86;
+}
+.button .button-text {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.splash {
+  position: relative;
+  min-height: 600px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+}
+.splash .splash-text {
+  margin: 0 auto;
+  text-align: center;
+}
+.splash .splash-text h1 {
+  margin: 20px 110px;
+  font-family: "Jost", sans-serif;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 80px;
+  letter-spacing: 0.1em;
+}
+.splash .splash-text h2 {
+  margin: 24px 0;
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 52px;
+  color: #0a0a0f;
+}
+.splash-start {
+  min-height: 700px;
+  background-image: url("https://i.postimg.cc/vBnRRfWD/start.jpg");
+  background-position: top;
+  margin-bottom: 150px;
+}
+.splash-start .splash-inner-start {
+  position: relative;
+  margin: auto;
+}
+.splash-start .splash-inner-button {
+  position: relative;
+  margin: auto;
+  max-width: 80%;
+  color: #1e6b86;
+  background-color: rgba(246, 248, 245, 0.75);
 }/*# sourceMappingURL=style.css.map */

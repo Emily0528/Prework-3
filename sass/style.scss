@@ -53,19 +53,23 @@ p {
 }
 
 // Navigation
+
 .navigation {
-  max-width: 1300px;
-  margin: 0;
-  padding: 24px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: transparent;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
+  background: transparent;
+
+  &__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   ul {
     padding: 0;
@@ -77,10 +81,8 @@ p {
       margin: 0 17px;
       position: relative;
 
-      &:hover {
-        ul {
-          display: block;
-        }
+      &:hover ul {
+        display: block;
       }
 
       ul {
@@ -92,15 +94,15 @@ p {
 
         li {
           display: block;
-          margin: 0 0 12px 0;
-          background: var(--color-text-primary);
+          margin-bottom: 12px;
+          background: $color-primary;
 
           a {
-            color: var(--color-primary);
+            color: $color-primary;
             padding: 0 24px;
 
             &:hover {
-              color: var(--color-secondary);
+              color: $color-secondary;
             }
           }
         }
@@ -110,10 +112,10 @@ p {
 
   a {
     text-decoration: none;
-    color: var(--color-text-primary);
+    color: $color-primary;
 
     &:hover {
-      color: var(--color-secondary);
+      color: $color-secondary;
     }
   }
 
@@ -124,24 +126,19 @@ p {
 
     h1 {
       font-family: "Birthstone";
+      color: $color-secondary;
+      font-size: 44px;
       text-transform: none;
-    }
-
-    img {
-      height: 40px;
-      margin-left: 60px;
+      margin-top: 0;
     }
   }
 
-  .nav-menu {
-    a {
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 500;
-      line-height: 80px;
-      font-family: $font-secondary;
-      text-transform: uppercase;
-    }
+  .nav-menu a {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 80px;
+    font-family: $font-secondary;
+    text-transform: uppercase;
   }
 }
 

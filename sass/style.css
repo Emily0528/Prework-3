@@ -12,6 +12,12 @@ body {
   color: #1e6b86;
 }
 
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .navigation {
   max-width: 1300px;
   margin: 0;
@@ -151,4 +157,62 @@ body {
   max-width: 80%;
   color: #1e6b86;
   background-color: rgba(246, 248, 245, 0.75);
+}
+
+.features-section {
+  text-align: center;
+  margin: 50px 0;
+}
+.features-section .text-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.features-section .text-title h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #0a0a0f;
+  margin-bottom: 40px;
+}
+.features-section .features {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.features-section .features .feature {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+.features-section .features .feature .feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px auto;
+  border: 2px solid #fbbf24;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features-section .features .feature .feature-icon i {
+  color: #28a745;
+  width: 40px;
+  height: 40px;
+}
+.features-section .features .feature .feature-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.features-section .features .feature .feature-text {
+  font-size: 16px;
+  color: #0a0a0f;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .features {
+    flex-direction: column;
+    gap: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

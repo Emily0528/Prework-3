@@ -200,6 +200,8 @@ body {
   }
 }
 
+// Features
+
 .features-section {
   text-align: center;
   margin: 50px 0;
@@ -267,5 +269,87 @@ body {
   .features {
     flex-direction: column;
     gap: 30px;
+  }
+}
+
+// Peaks
+
+.peaks {
+  padding: 80px 20px;
+  background-color: #f8f8f8;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &-header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 400;
+      color: #777;
+    }
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // ⬅️ zawsze 3 w rzędzie
+    gap: 30px;
+  }
+
+  .peak-card {
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    img {
+      height: 250px;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h4 {
+      font-size: 20px;
+      margin: 20px 0 5px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .peaks {
+    &-grid {
+      grid-template-columns: repeat(2, 1fr); // tablet
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .peaks {
+    &-grid {
+      grid-template-columns: 1fr; // mobile
+    }
   }
 }

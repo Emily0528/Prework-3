@@ -1,13 +1,13 @@
 // Colors
-$color-primary: #1e6b86;
-$color-secondary: #54595f;
-$color-accent: #12b6f1;
+$color-primary: #085f1c;
+$color-secondary: #28a745;
+$color-accent: #4a4d4a;
 
-$color-text-primary: #1e6b86;
-$color-text-secondary: #0a0a0f;
+$color-text-primary: #085f1c;
+$color-text-secondary: #4c4c52;
 
 // Fonts
-$font-primary: "Roboto", sans-serif;
+$font-primary: "Noto Serif", sans-serif;
 $font-secondary: "Jost", sans-serif;
 
 // Global
@@ -31,6 +31,27 @@ body {
   padding: 0 20px;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-secondary;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+.text-h3 {
+  font-family: $font-primary;
+  font-style: italic;
+  color: $color-text-secondary;
+  text-transform: none;
+}
+
 // Navigation
 .navigation {
   max-width: 1300px;
@@ -39,7 +60,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: transparent; // <-- Pasek nawigacji bez tła
+  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -72,9 +93,7 @@ body {
         li {
           display: block;
           margin: 0 0 12px 0;
-          background: var(
-            --color-text-primary
-          ); // można zmienić, jeśli chcemy inny kolor submenu
+          background: var(--color-text-primary);
 
           a {
             color: var(--color-primary);
@@ -91,7 +110,7 @@ body {
 
   a {
     text-decoration: none;
-    color: var(--color-text-primary); // tekst nawigacji
+    color: var(--color-text-primary);
 
     &:hover {
       color: var(--color-secondary);
@@ -103,6 +122,11 @@ body {
     align-items: center;
     gap: 10px;
 
+    h1 {
+      font-family: "Birthstone";
+      text-transform: none;
+    }
+
     img {
       height: 40px;
       margin-left: 60px;
@@ -113,8 +137,9 @@ body {
     a {
       text-decoration: none;
       font-size: 17px;
+      font-weight: 500;
       line-height: 80px;
-      font-family: var(--font-primary);
+      font-family: $font-secondary;
       text-transform: uppercase;
     }
   }
@@ -124,20 +149,21 @@ body {
   display: inline-block;
   padding: 16px 36px;
   margin-top: 30px;
-  background-color: $color-accent;
+  background-color: $color-secondary;
   color: #ffffff;
   text-decoration: none;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: $color-primary;
+    background-color: $color-accent;
   }
 
   .button-text {
+    font-family: $font-secondary;
     color: #ffffff;
     font-size: 16px;
     line-height: 16px;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 4px;
     text-transform: uppercase;
   }
@@ -171,11 +197,13 @@ body {
 
     h2 {
       margin: 24px 0;
-      font-family: $font-secondary;
+      font-family: $font-primary;
       font-weight: 300;
       font-size: 30px;
+      font-style: italic;
       line-height: 52px;
       color: $color-text-secondary;
+      text-transform: none;
     }
   }
 
@@ -235,14 +263,14 @@ body {
         width: 80px;
         height: 80px;
         margin: 0 auto 20px auto;
-        border: 2px solid #28a745;
+        border: 2px solid $color-secondary;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
 
         i {
-          color: #28a745;
+          color: $color-secondary;
           font-size: 36px;
           width: 40px;
           height: 40px;
@@ -301,7 +329,7 @@ body {
 
   &-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); // ⬅️ zawsze 3 w rzędzie
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
 
@@ -320,7 +348,7 @@ body {
       display: block;
     }
 
-    h4 {
+    h3 {
       font-size: 20px;
       margin: 20px 0 5px;
     }
@@ -367,9 +395,8 @@ body {
   }
 
   .copyright {
-    font-size: 14px;
-    position: relative;
-    z-index: 1;
+    font-family: $font-secondary;
+    font-weight: 500;
   }
 
   .social-icons {
@@ -395,7 +422,7 @@ body {
         transform 0.3s;
 
       &:hover {
-        background: #28a745;
+        background: $color-secondary;
         transform: scale(1.1);
       }
 
